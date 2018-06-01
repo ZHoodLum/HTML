@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	color:#27D220;
+	text-align:center;
+	letter-spacing:2em;
+}
+body{
+	background-color:#56F9F6;
+}
+p{color:#E00C0F;}
+.p1{
+	text-decoration:underline;
+}
+#p2{
+	color:#150CE8;
+	}
+a:hover{
+	color:#F8F8F8;
+}
+img{
+	float:left;
+	margin:10px;
+}
+#div1{
+	background-color:#EAF003;
+}
+#adiv{
+	text-align:center;
+}
+a{
+	margin-right:40px;
+}
+p{
+	text-indent:2em;
+	line-height:2em;
+	font-size:14px;
+	font-weight:900;
+
+}
+p5{
+	text-align:right
+}

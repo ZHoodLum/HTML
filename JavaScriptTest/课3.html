@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	var name;
+	name=window.prompt("请输入您的名字","20");//窗口
+	window.alert("我的名字是："+name); //禁止对话框
+	document.write("我的名字是："+name);//文本形式、
+	document.write("我的名字是："+typeof(name));//输出文本类型
+	
+	
+	var age=parseInt(name);//parseInt用于解析一个字符串  并返回一个浮点数
+	var age1=parseFloat("asd20.5");
+	document.write("age1:"+age1);
+	
+	
+	var n1=isNaN("12");//isNaN  检查是否为数字   返回布尔类型
+	var n2=isNaN(12);
+	
+    var score=window.prompt("请输入成绩：","");
+	var s=parseFloat(score);
+	if(score>=60){
+		alert("成绩合格");
+		}
+	else{
+		alert("滚几把蛋去");
+		}
+		</script>
+</body>
+</html>

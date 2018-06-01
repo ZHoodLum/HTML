@@ -1,0 +1,37 @@
+
+body{
+	background-color:#e9fbff;
+	background-image:url(../image/m.jpg);
+}
+
+li{
+   list-style-type:none;
+    height:35px;
+   }
+.txt{
+	width:150px;
+	height:20px;
+	border:#157782 1px solid;
+	background-color:#fffccc;	
+	}
+.btn{
+	margin-left:4em;
+	margin-top:2em;
+	}
+h2{
+	margin-top:3em;
+ }
+#left{
+		width:350px;
+		height:14em;
+		float:left;
+		margin-top:3em;
+		margin-left:25em;
+	}
+#right{
+	width:270px;
+	height:14em;
+	float:right;
+	margin-top:3em;
+	margin-right:30em;
+}

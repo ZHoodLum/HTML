@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function changeCity() {
+			// body...
+			
+			var cityList = new Array();
+			cityList["辽宁省"] = ["沈阳", "大连", "抚顺"];
+			cityList["山东省"] = ["青岛", "烟台", "济南"];
+			document.myform.city.options.length = 0;
+			//获取索引值
+			//var pindex = document.myform.province.selectIndex - 1;
+			//获取省份的标识
+			var pvalue = document.myform.province.value;
+			alert(pvalue);
+			for(var j in cityList[pvalue]){
+				var op1 = new Option(cityList[pvalue][j], cityList[pvalue][j]);
+				document.myform.city.options.add(op1);
+			}
+		}
+	</script>
+</head>
+<body>
+	<form id="myform" name="myform">
+		<select name="province" id="province" onchange="changeCity()">
+			<option>----请选择省份----</option>
+			<option>辽宁省</option>
+			<option>山东省</option>
+		</select>
+		<select name="city" id="city">
+			<option>----选择城市----</option>
+		</select>
+	</form>
+</body>
+</html>

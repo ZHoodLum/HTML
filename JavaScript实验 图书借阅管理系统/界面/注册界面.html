@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员注册页面</title>
+<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+<script language="javascript">
+function validate(){
+		//会员账号验证  以  (开始)^[a-zA-Z](\w){2,9}$   （结束）
+		var name = document.myform.name.value;
+		var exp = new RegExp(/^[a-zA-Z](\w){2,9}$/);
+		if(!exp.test(name)){
+			alert("会员账号不符");
+			document.myform.name.focus();//光标定位
+			return false;//防止向下进行
+		}
+		
+		//对真实姓名的校验   ^[\u4e00-\u9fa5]{2}$
+		var realname = document.myform.realname.value;
+		var exp = new RegExp(/^[\u4e00-\u9fa5]{2,}$/);
+		if(!exp.test(realname)){
+			alert("姓名不符");
+			document.myform.realname.focus();//光标定位
+			return false;//防止向下进行
+	 
+		}
+	
+		//密码验证 ^\d{5,}$
+	
+		var pwd = document.myform.pwd.value;
+		var exp = new RegExp(/^\d{5,}$/);
+		if(!exp.test(pwd)){
+			alert("密码不符");
+			document.myform.pwd.focus();//光标定位
+			return false;//防止向下进行
+	 
+		}
+		//重复密码
+		var repwd = document.myform.repwd.value;
+		if(repwd!=pwd){
+			alert("密码不一致不符");
+			document.myform.repwd.focus();//光标定位
+			return false;//防止向下进行	
+		}
+		//手机   ^1[38]\d{9}$
+		var tel = document.myform.tel.value;
+		var exp = new RegExp(/^1[38]\d{9}$/);
+		if(!exp.test(tel)){
+			alert("手机不符");
+			document.myform.tel.focus();//光标定位
+			return false;//防止向下进行
+	 
+		}
+		//qq   ^[1-9]\d{4,9}$
+		var qq = document.myform.qq.value;
+		var exp = new RegExp(/^[1-9]\d{4,9}$/);
+		if(!exp.test(qq)){
+			alert("qq不符");
+			document.myform.qq.focus();//光标定位
+			return false;//防止向下进行
+	 
+		}
+	
+		//邮箱  ^[1-9a-zA-Z](\w)*@[1-9a-zA-Z]+\.[a-zA-Z]+$
+		var email = document.myform.email.value;
+		var exp = new RegExp(/^[1-9a-zA-Z](\w)*@[1-9a-zA-Z]+\.[a-zA-Z]+$/);
+		if(!exp.test(email)){
+			alert("邮箱不符");
+			document.myform.email.focus();//光标定位
+			return false;//防止向下进行
+	 
+		}
+	}
+	//onsubmit="return validate()"     onsubmit先执行return validate()事件  在执行action
+	function changeCity() {
+			// body...
+			
+			var cityList = new Array();
+			cityList["辽宁省"] = ["沈阳", "大连", "抚顺"];
+			cityList["山东省"] = ["青岛", "烟台", "济南"];
+			document.myform.city.options.length = 0;
+			//获取索引值
+			//var pindex = document.myform.province.selectIndex - 1;
+			//获取省份的标识
+			var pvalue = document.myform.province.value;
+			alert(pvalue);
+			for(var j in cityList[pvalue]){
+				var op1 = new Option(cityList[pvalue][j], cityList[pvalue][j]);
+				document.myform.city.options.add(op1);
+			}
+		}
+		
+</script>
+</head>
+<body>
+<div id="title">用户免费注册页面</div>
+<div id="main">
+  <ul>
+<form id="myform" name="myform" action="登陆界面.html" 
+               method="post"  onsubmit="return validate()">
+           
+	<li><label>会员帐号：</label>
+		<input name="name"  class="txt"/>
+        <font color="red">字母开头，由3-10位数字、字母和下划线组成</font>
+ 	</li>
+    <li><label>真实姓名：</label>
+		<input name="realname"  class="txt"/>
+        <font color="red">2位以上中文</font>
+ 	</li>
+    <li><label>登录密码：</label>
+    	<input name="pwd" type="password" class="txt"/>
+    	<font color="red">5位以上数字组成</font>
+     </li>
+     <li><label>重复密码：</label>
+    	<input name="repwd" type="password" class="txt"/>
+    	<font color="red">与登录密码相同</font>
+     </li>
+     <li><label>手机号码：</label>
+     	<input name="tel"  class="txt"/>
+        <font color="red">有效的11位数字</font>
+     </li>
+      <li><label>QQ 号码：</label>
+      		<input name="qq"  class="txt"/>
+            <font color="red">合法QQ号码</font>
+        </li>
+        <li><label>邮箱地址：</label>
+        	<input name="email"  class="txt"/>
+            <font color="red">合法邮箱</font>
+        </li>
+        <li><label>家庭地址：</label>
+        <select name="province" id="province" onchange="changeCity()">
+			<option>----请选择省份----</option>
+			<option>辽宁省</option>
+			<option>山东省</option>
+		</select>
+		<select name="city" id="city">
+			<option>----选择城市----</option>
+		</select>
+        </li>
+        <li>
+        	<input name="sub"  type="submit" class="btn" value="同意以下条款并提交注册信息" />
+        	<input name="reset" type="reset" class="btn" value="重置" />
+      </li>
+      <li><img src="../image/read.gif" width="35" height="26" />阅读《服务协议》 </li>
+      <li class="fwxy">
+        <textarea name="textarea" cols="70" rows="5">
+本协议由您与沈阳工学院图书系统共同缔结，本协议具有合同效如用户不同意本服务条款任意内容，请勿注册或使用沈阳工学院图书系统服务。如用户通过进入注册程序并勾选"我同意沈阳工学院图书系统通行证服务条款"，即表示用户与沈阳工学院图书系统已达成协议，自愿接受本服务条款的所有内容。此后，用户不得以未阅读本服务条款内容作任何形式的抗辩。         
+       </textarea>
+      </li>
+      
+      
+    </form>
+  </ul>
+</div>
+<div id="about">Copyright © 2017 沈阳工学院版权所有</div>
+</body>
+</html>

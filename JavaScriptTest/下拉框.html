@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<script language="javascript">
+		function changeCity(){
+			//获取省份
+			var p = document.myform.province.value;	
+			var newOp1,newOp2;
+			switch(p){
+				case"辽宁":
+				newOp1 = new Option("沈阳","沈阳");
+				newOp2 = new Option("鞍山","鞍山");	
+				break;	
+				case"山东":
+				newOp1 = new Option("青岛","青岛");
+				newOp2 = new Option("烟台","烟台");	
+				break;
+			}
+			//执行完  清空选项
+			document.myform.city.options.length=0;
+			//选项加入
+			document.myform.city.options.add(newOp1);
+			document.myform.city.options.add(newOp2);
+		}
+	</script>
+</head>
+
+<body>
+    <form id="myform" name="myform">
+        <select name="province" id="province" onchange="changeCity()">
+            <option>--选择省份--</option>
+            <option>辽宁</option>
+            <option>山东</option>
+            <option>内蒙古</option>
+        </select>
+        
+        <select name="city" id="city">
+            <option>--选择城市--</option>
+        </select>
+    
+    </form>
+
+</body>
+</html>

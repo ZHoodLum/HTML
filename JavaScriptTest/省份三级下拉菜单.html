@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<script type="text/javascript">	
+		function changeCity() {
+			document.myform.city.options.length = 0;
+			//省份
+			var cityList = new Array();
+			cityList["辽宁省"] = ["沈阳", "大连", "抚顺"];
+			cityList["山东省"] = ["青岛", "烟台", "济南"];
+			
+			//获取索引值
+			//var pindex = document.myform.province.selectIndex - 1;
+			//获取省份的标识
+			var pvalue = document.myform.province.value;
+			alert(pvalue);
+			for(var j in cityList[pvalue]){
+				var op1 = new Option(cityList[pvalue][j], cityList[pvalue][j]);
+				document.myform.city.options.add(op1);
+			}
+			changeArea();
+		}
+			
+			function changeArea() {
+			document.myform.area.options.length = 0;
+			//地区
+			var areaList = new Array();
+			areaList["沈阳"] = ["朝阳", "大阪", "彰武"];
+			areaList["大连"] = ["联盟", "彩虹", "6号"];
+			areaList["抚顺"] = ["比尔吉沃特", "无畏先锋", "艾欧尼亚"];
+			areaList["青岛"] = ["弗雷尔卓得", "德玛西亚", "黑色玫瑰"];
+			areaList["烟台"] = ["男爵领域", "皮城女警", "裁决之地"];
+			areaList["济南"] = ["扭曲丛林", "战争学院", "守望之海"];
+			//获取地区
+			var parea = document.myform.city.value;
+			alert(parea);
+			for(var i in areaList[parea]){
+				var op2 = new Option(areaList[parea][i], areaList[parea][i]);
+				document.myform.area.options.add(op2);
+			}
+			}
+	</script>
+    
+</head>
+
+<body>
+
+            <form id="myform" name="myform">
+                <select name="province" id="province" onchange="changeCity()">
+                    <option>----请选择省份----</option>
+                    <option>辽宁省</option>
+                    <option>山东省</option>
+                </select>
+                <select name="city" id="city" onchange="changeArea()">
+                    <option>----选择城市----</option>
+                </select>
+                <select name="area" id="area">
+                    <option>----选择地区----</option>
+                </select>
+             </form>
+     
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript">
+function checkAll(boolvalue)
+{
+   var allCheckBoxs=document.getElementsByName("isbuy") ;
+   
+   
+   for (var i=0;i<allCheckBoxs.length ;i++)
+   {
+	   		if(allCheckBoxs[i].checked){
+	        	allCheckBoxs[i].checked=false; 
+			}else{
+				allCheckBoxs[i].checked=true; 
+		}
+   }  
+}  
+
+</script>
+</head>
+
+<body>
+<form>
+<table width="300" height="250" border="2" align="center">
+	<tr>
+    	<td colspan="8" align="center"><h4>所有商品</h4></td></tr>
+   
+		 <tr><td colspan="8" align="center"><input id="button"  type="checkbox" name="button" onClick="checkAll(true)">全选/取消</td></tr>
+    
+    <tr>
+      <td><input type="checkbox" name="isbuy" id="isbuy"/></td>
+      <td><img src="../image/1.PNG" width="100" height="100"/><br> </td>
+      </tr>
+      
+      <tr>
+      <td><input type="checkbox" name="isbuy" id="isbuy"/> </td>
+    <td> <img src="../image/2.PNG"  width="100" height="100" /><br> </td>
+    </tr>
+    
+    <tr>
+    <td><input type="checkbox" name="isbuy" id="isbuy"/> </td>
+    <td> <img src="../image/3.PNG"  width="100" height="100" /><br> </td>
+    </tr>
+    
+    <tr>
+     <td><input type="checkbox" name="isbuy" id="isbuy"/> </td>
+    <td> <img src="../image/4.PNG"  width="100" height="100" /><br> </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

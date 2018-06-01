@@ -1,0 +1,96 @@
+/* CSS Document */
+#p1{
+	background-image:url(../image/h.jpg);
+	width:100%;
+	height:5em;
+	text-align:center;
+}
+#m2{
+	   float:left;
+	   margin-top:35px;
+   }
+#m2 li{
+   list-style-type:none;
+}
+
+.current a{
+		   text-decoration:none;  
+		   color:#000;	
+	   }
+.current{
+float:left;
+list-style:none;
+text-align:center;
+width:100px;
+height:25px;
+margin-left:11em;
+}
+#searchBox{
+	   margin-top:20px;
+   }
+#left{
+   width:400px;
+   height:786px;
+   float:left;
+   background-color:#FFF; 
+   border:groove #FFC;
+
+   text-align:center;
+}
+#menuBox a{
+   list-style-type:none;
+}
+.m3 a{  
+	   font-size:15px;
+	   text-decoration:none;
+	   color:#000000;
+	   list-style-type:none;
+	   margin-right:2em;
+}
+.m3{
+   list-style-type:none;
+}
+#right{
+	margin-left:1px;
+	float:right;
+}
+
+
+#footer{
+   width:100%;
+   height:10em;
+   border:groove #A5A2A2;
+   margin-top:55em;
+}
+#f1{
+   float:left;
+   margin-left:10em;
+   text-align:center;
+}
+#f2{
+   float:left;
+   margin-left:13em;
+   text-align:center;
+}
+#f3{
+   float:left;
+   margin-left:13em;
+   text-align:center;
+}
+#f4{
+   float:left;
+   margin-left:13em;
+   text-align:center;
+}
+#m7{
+   float:left;
+   margin-top:35px;  
+}
+.m8{
+   margin-top:15em;
+   list-style-type:none;
+   color:#909090;
+} 
+#f5{
+	text-align:center;
+}

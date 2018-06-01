@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script language="javascript">
+	//获取长度
+	function getLength(){
+		var len=document.getElementById("myselect").length;
+		//var len = document.getElementsByName("myselect")[0].length;
+		//document.myform.myselect;
+		alert(len);
+	}
+	function getIndex(){
+		var ind=document.getElementById("myselect").selectedIndex;
+		alert(ind);
+	}
+	//获取选对应中的值
+	function getValue(){
+		var value=document.getElementById("myselect").value;
+		alert(value);
+	}
+	function getClear(){
+		document.myform.myselect.options.length()=0;
+		
+	}
+	function addOptions(){
+		//new Option()
+		document.myform.myselect.options.add(new Option("西瓜","西瓜"));
+	}
+
+</script>
+</head>
+
+<body>
+    <form name="myform" id="myform" action="" method="post">
+    	<select name="myselect" id="myselect">
+        	<option value="苹果">苹果</option>
+            <option value="香蕉">香蕉</option>
+            <option value="大菠萝">大菠萝</option>
+            <option value="西瓜">西瓜</option>  
+        </select>
+        
+        <input type="button" value="获取长度" onclick="getLength()"/>
+        <input type="button" value="获取对应的索引" onclick="getIndex()"/>
+        <input type="button" value="显示值" onclick="getValue()"/>
+        <input type="button" value="清空选项" onclick="getClear()"/>
+        <input type="button" value="添加选项" onclick="addOptions()"/>
+        
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+td{
+font-family:"新宋体" ; font-size:14px;
+}
+</style>
+<script type="text/javascript">
+  var flag = false ; // 标志是否提交表单
+  function cls0(){
+      var val = document.myform.email.value ;
+	  if(val == "请输入邮件地址"){
+	  document.myform.email.value = "";
+	  }
+	 document.myform.email.focus();
+   }
+
+ function doMailAction()
+ {
+    var email  = document.myform.email.value ;
+    var  reg = /^[0-9a-zA-Z_]+@[0-9a-zA-Z]+[\.]{1}[0-9a-zA-Z]+[\.]?[0-9a-zA-Z]+$/;
+     if(!reg.test(email)) {
+	 document.getElementById("tdemail").innerHTML
+	           ="<font color = red>邮件地址不符合要求</font>";
+	 document.myform.email.select();
+	 flag = false ;
+   }
+   else  {
+      document.getElementById("tdemail").innerHTML
+	            ="<font color = green>邮件地址格式正确</font>";
+	  flag = true ;
+   }
+    
+   } 
+ function doPwdAction(){
+      var pwd  = document.myform.pwd.value ;
+     var reg1 = /\d{6,}/;
+     if(!reg1.test(pwd)) {
+	     document.getElementById("tdpwd").innerHTML
+	         ="<font color = red>密码不符合要求</font>";
+	      flag = false ;
+   }else {
+        document.getElementById("tdpwd").innerHTML
+	          ="<font color = green>密码格式符合要求</font>";
+	     flag = true ;
+    }
+  }
+ 
+ function enableButton(){
+       if(document.myform.tiaokuan.checked)   {
+	       document.myform.sub.disabled = false ;
+	   }
+	   else  {
+	       document.myform.sub.disabled = true ;
+	    }
+   }
+</script>
+</head>
+
+<body>
+<form name="myform" method="post" action="www.baidu.com" >
+  <table width="556" height="173">
+    <tr>
+       <td height="31" colspan="3">
+          <font size="+1" face="新宋体" color="#000099">创建你的雅虎邮箱</font>
+       </td>
+    </tr>
+    <tr>
+      <td width="129" height="33" align="right">雅虎邮箱：</td>
+      <td width="175" >
+           <input  name="email" value="请输入邮件地址" onFocus="cls0()" onBlur="doMailAction()" />
+       </td>
+      <td width="236"id="tdemail">邮箱名只能是字母和数字、下划线</td>
+    </tr>
+    <tr>
+      <td height="32" align="right">密码：</td>
+      <td>
+        <input type="password" name="pwd" onBlur="doPwdAction()" />
+      </td>
+      <td id="tdpwd">密码至少是6位数字</td>
+    </tr>
+    <tr>
+    
+      <td height="36" align="center" colspan="3">
+          <input type="checkbox" name="tiaokuan" onClick="enableButton()" >
+          我已经阅读并同意中国雅虎的服务条款和隐私权政策
+       </td>
+       </tr>
+       <tr>
+       <td colspan="3">
+	      <textarea cols="80" rows="5" >
+欢迎光临中国雅虎。中国雅虎根据以下服务条款为您提供服务。这些条款可由中国雅虎随时更新，且毋须另行通知。中国雅虎服务公约(以下简称本"服务公约")一旦发生变动, 中国雅虎将在网页上公布修改内容。修改后的服务公约一旦在网页上公布即有效代替原来的服务公约。
+           </textarea>
+       </td>
+      </tr>
+	<tr>
+      <td colspan="3" align="center">
+         <input type="submit" name="sub"  value="提交表单" disabled/>
+     </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

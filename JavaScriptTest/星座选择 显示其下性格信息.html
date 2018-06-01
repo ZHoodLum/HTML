@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript">
+	function changeCity(){
+		
+		var p=document.getElementById("constellation").value;
+		
+		switch(p){
+			case"--选择星座--牛":
+			document.getElementById("a").innerHTML=null;
+			document.getElementById("b").innerHTML=null;
+			
+			case"金牛":
+			document.getElementById("a").innerHTML='<img src="../image/img1.jpg"/>';
+			document.getElementById("b").innerHTML="性格爆操，易怒";
+			break;
+			case"白羊":
+			document.getElementById("a").innerHTML='<img src="../image/img2.jpg"/>';
+			document.getElementById("b").innerHTML="性格温顺，善良";
+			break;
+			case"天蝎":
+			document.getElementById("a").innerHTML='<img src="../image/img3.jpg"/>';
+			document.getElementById("b").innerHTML="性格阴险，易暴躁"
+			break;
+			}
+		}
+</script>
+</head>
+
+<body>
+
+
+
+<form id="myform" name="myform" onchange="changeCity()">
+    <select name="constellation" id="constellation" >
+    	<option>--选择星座--</option>
+        <option>金牛</option>
+        <option>白羊</option>  
+        <option>天蝎</option>  
+    </select>
+    <br />
+    <div id="a">
+
+    </div>
+    <br/>
+      <div id="b">
+
+    </div>
+     
+    </select>
+<form>
+</body>
+</html>

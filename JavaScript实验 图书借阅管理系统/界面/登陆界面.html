@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆界面</title>
+
+<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+
+<script language="javascript">
+function checkAll(checked)
+{
+   var allCheckBoxs=document.getElementsByName("picture") ;
+   for (var i=0;i<allCheckBoxs.length ;i++)
+   {
+	   		allCheckBoxs[i].checked=checked;
+   }  
+}
+function validate(){
+		//会员账号验证  以  (开始)^[a-zA-Z](\w){2,9}$   （结束）
+		var name = document.myform.name.value;
+		var exp = new RegExp(/^[a-zA-Z](\w){2,9}$/);
+		if(!exp.test(name)){
+			alert("会员账号不符");
+			document.myform.name.focus();//光标定位
+			return false;//防止向下进行
+		}
+		//密码验证 ^\d{5,}$
+	
+		var pwd = document.myform.pwd.value;
+		var exp = new RegExp(/^\d{5,}$/);
+		if(!exp.test(pwd)){
+			alert("密码不符");
+			document.myform.pwd.focus();//光标定位
+			return false;//防止向下进行
+	 
+		}
+		
+	}
+</script>
+
+</head>
+
+<body>
+<div id="centent" >
+<li colspan="8" align="center"><h2>欢迎来到图书管理登陆界面</h2></li> 
+
+<div id="right">
+	<form>       
+        <h4>系统将获取一下权限：</h4>   
+        <li><input id="button"  type="checkbox" name="button" onClick="checkAll(this.checked)">全选！</li>
+        <li><input type="checkbox" name="picture"/>获取您的昵称、头像、性别</li>
+        <li><input type="checkbox" name="picture"/>您是否同意登录服务协议</li>
+    </form>
+</div>
+
+<div id="left">
+    <form>
+             <ul>             
+                <li>
+                    <label>会员账号：</label>
+                    <input type="text" name="id" class="txt"/><br />
+                </li>
+                <li>
+                    <label>登录密码：</label> 
+                    <input type="password" name="txtPw" class="txt"/><br />
+                </li>
+                <li>
+                        <label>动态口令：</label>
+                        <input type="password" name="txtPw" class="txt"/>
+                </li>          
+                <li>
+                <a href="首页.html"><input type="button" name="Submit" value="登录" class="btn" /></a>
+                <a href="注册界面.html"> <input type="button" value="注册" class="btn" /></a>
+                </li>                    
+           </ul>    
+    </form>
+</div>
+
+</div>
+</body>
+</html>

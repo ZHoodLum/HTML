@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新书抢鲜</title>
+<link rel="stylesheet" type="text/css" href="../css/new.css" />
+<script language="JavaScript">
+
+function clock(){
+	var time = new Date();
+	var month = time.getMonth();
+	var date = time.getDate();
+	var hours = time.getHours();
+	var minutes = time.getMinutes();
+	var seconds = time.getSeconds();
+	hours = hours>=10?hours:("0"+hours);
+	minutes = minutes>=10?minutes:("0"+minutes);
+	seconds = seconds>=10?seconds:("0"+seconds);//进行判断，对的用前者，则后者
+	
+	document.getElementById("ck").innerHTML="现在是"+month+"月"+date+"日"+hours+"时"+minutes+"分"+seconds+"秒";
+	window.setTimeout("clock()",1000);	//设置定时器，调用函数clock，每隔一秒刷新时间
+	}
+	var text="";
+	day = new Date( )//当前时间
+	hours = day.getHours( )//获取小时的时间
+	if (( hours >= 6 ) && (hours <= 12 ))
+	 text="新的一天开始了，加油哦！";
+	if (( hours >= 12 ) && (hours < 18))
+	 text="中午好，继续努力哦！ ";
+	if (( hours >= 18 ) && (hours < 24))
+	 text="晚上好，注意休息哦！";
+	document.write( text);//输出文本内
+	
+	
+	
+function show(d1){
+var i;
+for(i=1;i<4;i++){
+if(i==d1){
+document.getElementById(d1).style.display='block';
+}
+else
+{document.getElementById(i).style.display='none';}
+}
+}
+</script>
+
+</head>
+
+<body onLoad="clock()">
+<div id="ck">
+    
+    </div>
+<div id="head">  	
+<h1 id="p1">图书借阅管理系统</h1>
+<!--
+<ul id="m2">
+   			    <li>
+                	<a href="登陆界面.html" target="_blank"><input type="button" value="请登录" class="btn"/></a>
+                    <input type="reset" value="注销" class="btn"/>
+                </li>
+         </ul>
+	<img src="../image/j.jpg" id="p1"> -->
+  	<ul id="main">
+       <li class="current"><a href="#"><a href="首页.html" target="_blank"><strong>首页</strong></a></li>
+       <li class="current"><a href="#"><a href="书籍排行.html" target="_blank"><strong>书籍排行</strong></a></li>
+       <li class="current"><a href="#"><strong>新书抢鲜</strong></a></li>
+       <li class="current"><a href="#"><strong>最近更新</strong></a></li>
+   </ul>
+   </div>
+   
+   
+<TABLE width="785" border="0" cellspacing="0" cellpadding="0" align="center">
+  <TR>
+    <TD height="29"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+  <TR>
+    <TD width="150" align="center"  valign="middle"><A href="#" class=" A1"  onMouseOver="javascript:show('1')">JAVA WEB</A></TD>
+    <TD width="150" align="center"><A href="#"class=" A1" onMouseOver="javascript:show('2')">ORACLE</A></TD>
+	<TD width="150" align="center"><A href="#"class=" A1" onMouseOver="javascript:show('3')">JAVASCRIPT</A></TD>
+	<TD>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+  </TR>
+  <TR>
+    <TD>
+    <DIV id="1"  style="display:block;"><img src="../image/1.PNG"></DIV>
+	<DIV id="2"  style="display:none;"><img src="../image/2.PNG"></DIV>
+	<DIV id="3"  style="display:none;"><img src="../image/3.PNG"></DIV>
+	</TD>
+  </TR>
+</TABLE>
+
+<div id="f5">
+     <span>
+           <ul>
+             <li class="m8">沈阳工学院有限公司负责经营</li>
+            </ul>
+     </span>
+     </div>
+     
+</body>
+</html>
