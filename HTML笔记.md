@@ -8,8 +8,8 @@
 
 
 ## HTML界面与JSP界面基本文档结构区别
-html基本文档组成
---
+* html基本文档组成
+
 ```
 <!DOCTYPE html>
 <html>
@@ -23,8 +23,8 @@ html基本文档组成
 </html>
 ```
 
-jsp基本文档组成
---
+* jsp基本文档组成
+
 ```
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -90,4 +90,30 @@ jsp基本文档组成
 </html>
 ```
 
-##
+## 用元数据说明文档
+* 指定名/值数据对
+
+  1.如表：meta元素使用的预定义元素数据类型
+  
+  元素数据名称|说明|
+  |-|:-:|
+  application name|当前页所属web应用系统名称
+  author|当前页作者名
+  description|用来生成HTML的软件名称（通常用于以Ruby on Rails、ASP.NET等服务器端框架生成HTLML页的情况下）
+  keywords|一批以逗号分开的字符串，用来描述页面的内容
+  
+  2.声明字符串编码：```<mate charset="Utf-8"/>```
+  
+  3.模拟HTTP标头字段： ```<meta http-equiv="refresh" content="5"> ```
+  
+    ps:   refresh的设置为每5s再次载入界面
+          http-equiv属性使用至有：`refresh`、`default-style`、`content-type`。
+
+
+
+
+
+
+
+
+
