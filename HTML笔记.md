@@ -10,11 +10,11 @@
 
 ## HTML4与HTML5区别：
 > 指定字符编码变化：
-*  HTML4：<meta http-equiv=‶content-type″ content=‶text/html; charset=UTF-8″>
-*  HTML5:<meta charset=‶UTF-8″>
+>*  HTML4：<meta http-equiv=‶content-type″ content=‶text/html; charset=UTF-8″>
+>*  HTML5:<meta charset=‶UTF-8″>
 > DOCTYPE声明变化：
-* HTML4：<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-* HTML5 :刻意不使用版本声明，一份文档将会适用于所有版本的 HTML。HTML5 中的 DOCTYPE 声明方法（不区分大小写）如下：
+>* HTML4：<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+>* HTML5 :刻意不使用版本声明，一份文档将会适用于所有版本的 HTML。HTML5 中的 DOCTYPE 声明方法（不区分大小写）如下：
  <!DOCTYPE html>
 
 ## HTML界面与JSP界面基本文档结构区别
