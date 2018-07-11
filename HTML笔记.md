@@ -12,10 +12,12 @@
 > 指定字符编码变化：
 >*  HTML4：
 ```
-<meta http-equiv=‶content-type″ content=‶text/html; charset=UTF-8″>```
+<meta http-equiv=‶content-type″ content=‶text/html; charset=UTF-8″>
+```
 >*  HTML5:
 ```
-<meta charset=‶UTF-8″>```
+<meta charset=‶UTF-8″>
+```
 > DOCTYPE声明变化：
 >* HTML4：
 ```
