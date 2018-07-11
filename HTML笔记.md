@@ -77,7 +77,7 @@ html、head、body、colgroup、tbody。
 > 新增的元素和废除的元素
 
 >>* 新增的结构元素
->>>* section：表示页面中内容块，比如章节、页眉、页脚或页面中的其他部分，可与<h1>到<h6>结合使用表示文档结构。
+>>>* section：表示页面中内容块，比如章节、页眉、页脚或页面中的其他部分，可与`<h1>`到`<h6>`结合使用表示文档结构。
 >>>* article:表示页面中一块与上下文不相关的独立内容，比如博客中的一篇文章或报纸中的一篇文章。
 >>>* aside:表示article内容之外，与article内容相关的辅助信息。
 >>>* header：表示页面中的区域块，通常用它表示标题。
@@ -117,16 +117,10 @@ html、head、body、colgroup、tbody。
 
 > 全局属性:HTML5中新增全局属性的概念，全局属性指可以对任何元素都使用的属性。
 >>>* contentEditable属性允许用户编辑元素中内容，使用该属性的元素必须为可以获得鼠标焦点的元素，而且在点击鼠标后向用户提供一个插入符号，提示用户该元素允许进行编辑。是boolean值类型，可以设为true、false或继承状态。其中，true代表可编辑，false代表不可编辑，当未指定true或false时与父元素的继承状态相同。
-
 >>>* designMode属性:用来指定整个页面是否可编辑，当页面可编辑时，页面中所有支持contentEditable属性的元素都变为可编辑状况。designMode属性只能在JavaScript脚本中被修改、编辑。属性值可取on（可编辑）或off（不可编辑）。
-
 >>>* hidden属性:HTML5中所有元素都允许使用hidden属性，该属性类似于input元素中hidden元素，boolean值，可设为true（不可见）、false（可见）。当某元素的hidden属性值为true时，浏览器不渲染该元素，使该元素处于不可见状态，但浏览器创建该元素内容，即页面加载后允许使用JavaScript脚本将该属性值取消，使该元素可见。
-
 >>>* spellcheck属性:针对input（type=text）与textarea这两个文本输入框提供的一个新属性，主要对用户输入内容进行拼写与语法检查。属性值为boolean值，可取true或false。
-
->>>* tableindex属性:当点击Tab键时，让窗口或页面中可获得焦点的链接元素或表单元素进行遍历，tableindex表示该元素第几个被访问到。
-
-若tableindex值为"-1"时表示无法获取该元素.
+>>>* tableindex属性:当点击Tab键时，让窗口或页面中可获得焦点的链接元素或表单元素进行遍历，tableindex表示该元素第几个被访问到。若tableindex值为"-1"时表示无法获取该元素.
  
  
  
